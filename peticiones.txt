@@ -1,0 +1,28 @@
+Peticion GET para rescatar los datos http://127.0.0.1:8000/api/get_user
+
+
+Peticion POST para el ingreso de datos: http://127.0.0.1:8000/api/add_user
+
+{
+    "id": 2,
+    "nombre": "",
+    "apellido": "",
+    "edad": ,
+    "salario": ,
+    "created_at": null,
+    "updated_at": null
+}
+
+Peticion PUT/PATCH para la edicion de datos (mandar el id a modificar) http://127.0.0.1:8000/api/mod_user/
+
+{
+    "id": 2,
+    "nombre": "",
+    "apellido": "",
+    "edad": ,
+    "salario": ,
+    "created_at": null,
+    "updated_at": null
+}
+
+Peticion DELETE para la eliminacion de datos (mandar el id a eliminar) http://127.0.0.1:8000/api/delete_user/

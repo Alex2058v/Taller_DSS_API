@@ -19,12 +19,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 //modificado
-Route::get('get_users', [usuariosController::class, 'index']); // Accede al método index en el controlador
-Route::resource('get_users', usuariosController::class); //establece el recurso a mostrar
-Route::post('store_user', [usuariosController::class, 'store']); // Crea un usuario
-Route::get('get_user/{usuario}', [usuariosController::class, 'show']); // Obtiene un usuario específico
-Route::put('update_user/{usuario}', [usuariosController::class, 'update']); // Actualiza un usuario específico
-Route::delete('delete_user/{usuario}', [usuariosController::class, 'destroy']); // Elimina un usuario específico
+Route::get('users', [usuariosController::class, 'index']); //accede al metodo index en el controllador
+Route::resource('users', usuariosController::class); //establece el recurso a mostrar
+
+Route::get('user', [usuariosController::class, 'show']); //accede al metodo index en el controllador
+Route::resource('user', usuariosController::class); //establece el recurso a mostrar para la ruta correspondiente
+
+Route::post('add_user', [usuariosController::class, 'store']);//creamos el acceso para el metodo post
 
 
+Route::put('mod_user/{id}', [usuariosController::class, 'update'])->name('ingresar.datos');
+Route::resource('mod_user', usuariosController::class); //establece el recurso a mostrar para la ruta correspondiente
+//Route::put('editar', [userController::class, 'update']);
+
+Route::delete('delete_user/{id}', [usuariosController::class, 'destroy']);
 ?>
