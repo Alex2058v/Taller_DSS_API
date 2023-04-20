@@ -25,4 +25,6 @@ Peticion PUT/PATCH para la edicion de datos (mandar el id a modificar) http://12
     "updated_at": null
 }
 
+Peticion GET para un regitro en especifico (mandar el id ha mostrar) http://127.0.0.1:8000/api/user/
+
 Peticion DELETE para la eliminacion de datos (mandar el id a eliminar) http://127.0.0.1:8000/api/delete_user/

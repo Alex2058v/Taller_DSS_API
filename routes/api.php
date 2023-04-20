@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('users', [usuariosController::class, 'index']); //accede al metodo index en el controllador
 Route::resource('users', usuariosController::class); //establece el recurso a mostrar
 
-Route::get('user', [usuariosController::class, 'show']); //accede al metodo index en el controllador
+Route::get('user/{id}', [usuariosController::class, 'show']); //accede al metodo index en el controllador
 Route::resource('user', usuariosController::class); //establece el recurso a mostrar para la ruta correspondiente
 
 Route::post('add_user', [usuariosController::class, 'store']);//creamos el acceso para el metodo post

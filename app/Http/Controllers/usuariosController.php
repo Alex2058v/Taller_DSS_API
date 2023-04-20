@@ -32,7 +32,8 @@ class usuariosController extends Controller
         }
     }
 
-    public function show(Usuarios $usuario){
+    public function show(Usuarios $usuario, string  $id){
+        $usuario = Usuarios::find($id);
         return $usuario;
     }
 
