@@ -9,3 +9,4 @@ class Usuarios extends Model
 {
     protected $fillable = ['nombre', 'apellido', 'edad', 'salario'];
 }
+?>

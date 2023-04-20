@@ -14,11 +14,22 @@ class usuariosController extends Controller
      */
     public function index(){
         return Usuarios::all();
-        //return response()->json($usuario);
     }
 
     public function store(Request $request){
-        return Usuarios::create($request->all());
+        $user = new Usuarios;
+        $user->id= $request->id;
+        $user->nombre= $request->nombre;
+        $user->apellidos= $request->apellidos;
+        $user->edad= $request->edad;
+        $user->salario= $request->salario;
+        $user->created_at= $request->created_at;
+        $result= $user->save(); //ingresando datos en la bd
+        if ($result) {
+            return "Los datos han sido ingresado con exito";
+        } else {
+            return "fail";
+        }
     }
 
     public function show(Usuarios $usuario){
